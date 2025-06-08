@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 5582c4309e471242e6bba086f2b2e255fdbc79a5
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { supabase } from '@/integrations/supabase/client';
@@ -104,8 +100,4 @@ const PublicPage = () => {
   );
 };
 
-<<<<<<< HEAD
 export default PublicPage;
-=======
-export default PublicPage;
->>>>>>> 5582c4309e471242e6bba086f2b2e255fdbc79a5

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 5582c4309e471242e6bba086f2b2e255fdbc79a5
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { User, Session } from '@supabase/supabase-js';
 import { supabase } from '@/integrations/supabase/client';
@@ -39,40 +35,19 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       (event, session) => {
         setSession(session);
         setUser(session?.user ?? null);
-<<<<<<< HEAD
-=======
-        
-        if (session?.user) {
-          setTimeout(() => {
-            fetchUserProfile(session.user.id);
-          }, 0);
-        } else {
-          setProfile(null);
-        }
->>>>>>> 5582c4309e471242e6bba086f2b2e255fdbc79a5
         setLoading(false);
       }
     );
 
-<<<<<<< HEAD
     supabase.auth.getSession().then(({ data: { session }, error }) => {
       setSession(session);
       setUser(session?.user ?? null);
-=======
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setSession(session);
-      setUser(session?.user ?? null);
-      if (session?.user) {
-        fetchUserProfile(session.user.id);
-      }
->>>>>>> 5582c4309e471242e6bba086f2b2e255fdbc79a5
       setLoading(false);
     });
 
     return () => subscription.unsubscribe();
   }, []);
 
-<<<<<<< HEAD
   useEffect(() => {
     if (user) {
       fetchUserProfile(user.id);
@@ -81,8 +56,6 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   }, [user]);
 
-=======
->>>>>>> 5582c4309e471242e6bba086f2b2e255fdbc79a5
   const fetchUserProfile = async (userId: string) => {
     try {
       const { data, error } = await supabase
@@ -169,8 +142,4 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
-<<<<<<< HEAD
 }
-=======
-};
->>>>>>> 5582c4309e471242e6bba086f2b2e255fdbc79a5
