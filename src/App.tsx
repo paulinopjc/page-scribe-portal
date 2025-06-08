@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -5,12 +6,19 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "@/contexts/AuthContext";
 import ProtectedRoute from "@/components/ProtectedRoute";
+<<<<<<< HEAD
 import Index from "./pages/frontend/Index";
 import Auth from "./pages/auth/Auth";
 import AdminDashboard from "./pages/admin";
 import AdminPages from "./pages/admin/pages/ListPages";
 import CreatePage from "./pages/admin/pages/CreatePage";
 import EditPage from "./pages/admin/pages/EditPage";
+=======
+import Index from "./pages/Index";
+import Auth from "./pages/Auth";
+import AdminDashboard from "./pages/AdminDashboard";
+import AdminPages from "./pages/AdminPages";
+>>>>>>> 5582c4309e471242e6bba086f2b2e255fdbc79a5
 import PublicPage from "./pages/PublicPage";
 import NotFound from "./pages/NotFound";
 
@@ -43,6 +51,7 @@ const App = () => (
                 <ProtectedRoute requireAdmin={true}>
                   <AdminPages />
                 </ProtectedRoute>
+<<<<<<< HEAD
               }
             />
             <Route 
@@ -60,6 +69,9 @@ const App = () => (
                   <EditPage />
                 </ProtectedRoute>
               }
+=======
+              } 
+>>>>>>> 5582c4309e471242e6bba086f2b2e255fdbc79a5
             />
             
             {/* Catch-all route */}

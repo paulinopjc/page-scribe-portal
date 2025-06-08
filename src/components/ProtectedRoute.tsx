@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5582c4309e471242e6bba086f2b2e255fdbc79a5
 import React from 'react';
 import { Navigate } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
@@ -10,7 +14,11 @@ interface ProtectedRouteProps {
 const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children, requireAdmin = false }) => {
   const { user, profile, loading } = useAuth();
 
+<<<<<<< HEAD
   if (loading || (requireAdmin && !profile)) {
+=======
+  if (loading) {
+>>>>>>> 5582c4309e471242e6bba086f2b2e255fdbc79a5
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-lg">Loading...</div>
@@ -29,4 +37,8 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children, requireAdmin 
   return <>{children}</>;
 };
 
+<<<<<<< HEAD
 export default ProtectedRoute;
+=======
+export default ProtectedRoute;
+>>>>>>> 5582c4309e471242e6bba086f2b2e255fdbc79a5
