@@ -1,5 +1,9 @@
+# React Base App
+
+## Project info
+
 **What is this project**
-This is a base template with admin and frontend support with CMS page creation and editing on the admin and viewing on the frontend. It can be used as a starting point for other projects.
+This is a base template with admin and frontend support with CMS page creation and editing on the admin and viewing on the frontend. It can be used as a starting point for other projects. Images and database are hosted on supabase.
 
 **Use your preferred IDE**
 
